@@ -18,7 +18,7 @@ int Menu(int* c)
   double o2;
   double result;
 
-  printf("Choose one of the following operations:\n ");
+  printf("Choose one of the following operations:\n");
   printf("Add (1)\n");
   printf("Subtract (2)\n");
   printf("Multiply (3)\n");
@@ -34,7 +34,7 @@ switch (*c)
   break;
   case 2:
   break;
-  case 3
+  case 3:
   break;
   case 4:
   break;
@@ -59,5 +59,5 @@ void GetOperands(double* x,double* y)
 void Add(double* x,double* y,double* result)
 {
   GetOperands(&x,&y);
-  *result=x+y;
+  *result=*x+*y;
 }
