@@ -17,8 +17,8 @@ int Menu(int* c)
 switch (*c)
 {
   case 1:
-  Add(&o1,&o2,&result);
-  OutputResult(&result);
+  Add(o1,o2,result);
+  OutputResult(result);
   break;
   case 2:
   break;
@@ -31,23 +31,23 @@ switch (*c)
 }
 
 
-void OutputResult(double* result)
+void OutputResult(double result)
 {
-  printf("%lf\n",result );
+  printf("%lf\n",&result );
 }
 
-void GetOperands(double* x,double* y)
+void GetOperands(double x,double y)
 {
     printf("Please enter the first operand: \n");
-    scanf("%lf",x );
+    scanf("%lf",&x );
     printf("Please enter the second operand: \n");
-    scanf("%lf",y );
+    scanf("%lf",&y );
 }
 
-void Add(double* x,double* y,double* result)
+void Add(double x,double y,double result)
 {
-  GetOperands(&x,&y);
-  *result=*x+*y;
+  GetOperands(x,y);
+  result=x+y;
 }
 
 int main(int argc, char const *argv[])
