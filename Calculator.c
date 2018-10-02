@@ -1,17 +1,5 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
-{
-  int choice;
-
-  while(choice!=-1)
-  {
-  Menu(&choice);
-  }
-
-  return 0;
-}
-
 int Menu(int* c)
 {
   double o1;
@@ -24,7 +12,7 @@ int Menu(int* c)
   printf("Multiply (3)\n");
   printf("Divide (4)\n");
   printf("Stop program (-1)\n");
-  scanf("%d\n",c);
+  scanf("%d",c);
 
 switch (*c)
 {
@@ -60,4 +48,16 @@ void Add(double* x,double* y,double* result)
 {
   GetOperands(&x,&y);
   *result=*x+*y;
+}
+
+int main(int argc, char const *argv[])
+{
+  int choice;
+
+  while(choice!=-1)
+  {
+  Menu(&choice);
+  }
+
+  return 0;
 }
