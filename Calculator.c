@@ -1,4 +1,4 @@
-//BenjaminBesic2AHIF
+//Benjamin Besic 2AHIF
 #include <stdio.h>
 
 int Menu(int* c)
