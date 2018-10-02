@@ -14,9 +14,9 @@ int main(int argc, char const *argv[])
 
 int Menu(int* c)
 {
-  int o1;
-  int o2;
-  int result;
+  double o1;
+  double o2;
+  double result;
 
   printf("Choose one of the following operations:\n ");
   printf("Add (1)\n");
@@ -26,7 +26,7 @@ int Menu(int* c)
   printf("Stop program (-1)\n");
   scanf("%d\n",c);
 
-switch (c)
+switch (*c)
 {
   case 1:
   Add(&o1,&o2,&result);
@@ -38,21 +38,17 @@ switch (c)
   break;
   case 4:
   break;
-  case -1
-  break;
-  default:
-  printf("Input not allowed, please try again! \n");
-  break;
+
 }
 }
 
 
-void OutputResult(int* result)
+void OutputResult(double* result)
 {
   printf("%s\n",result );
 }
 
-void GetOperands(int* x,int* y)
+void GetOperands(double* x,double* y)
 {
     printf("Please enter the first operand: \n");
     scanf("%d",x );
@@ -60,7 +56,7 @@ void GetOperands(int* x,int* y)
     scanf("%d",y );
 }
 
-void Add(int* x,int* y,int* result)
+void Add(double* x,double* y,double* result)
 {
   GetOperands(&x,&y);
   *result=x+y;
