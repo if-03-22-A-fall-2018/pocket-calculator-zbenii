@@ -45,15 +45,15 @@ switch (*c)
 
 void OutputResult(double* result)
 {
-  printf("%s\n",result );
+  printf("%lf\n",result );
 }
 
 void GetOperands(double* x,double* y)
 {
     printf("Please enter the first operand: \n");
-    scanf("%d",x );
+    scanf("%lf",x );
     printf("Please enter the second operand: \n");
-    scanf("%d",y );
+    scanf("%lf",y );
 }
 
 void Add(double* x,double* y,double* result)
