@@ -50,6 +50,12 @@ void Add(double x,double y,double* result)
   *result=x+y;
 }
 
+void Subtract(double x, double y, double* result)
+{
+  GetOperands(&x,&y);
+  *result=x-y;
+}
+
 int main(int argc, char const *argv[])
 {
   int choice;
