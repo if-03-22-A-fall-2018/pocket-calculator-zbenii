@@ -35,53 +35,45 @@ int Menu(int* c)
     GetOperands(&o1,&o2);
     Add(o1,o2,&result);
     OutputResult(result);
-  printf(" \n");
-  break;
-  case 2:
-  GetOperands(&o1,&o2);
-  Subtract(o1,o2,&result);
-  OutputResult(result);
-  printf(" \n");
-  break;
-  case 3:
-  GetOperands(&o1,&o2);
-  Multiply(o1,o2,&result);
-  OutputResult(result);
-  printf(" \n");
-  break;
-  case 4:
-  GetOperands(&o1,&o2);
-  if(o2!=0)
-  {
-    Divide(o1,o2,&result);
+    printf(" \n");
+    break;
+    case 2:
+    GetOperands(&o1,&o2);
+    Subtract(o1,o2,&result);
     OutputResult(result);
     printf(" \n");
-  }
-  else
-  {
-    printf("Division by Zero! \n");
+    break;
+    case 3:
+    GetOperands(&o1,&o2);
+    Multiply(o1,o2,&result);
+    OutputResult(result);
     printf(" \n");
-  }
-  break;
-  default:
-  printf("Input not allowed, please try again\n");
-  printf(" \n");
+    break;
+    case 4:
+    GetOperands(&o1,&o2);
+    if(o2!=0)
+    {
+      Divide(o1,o2,&result);
+      OutputResult(result);
+      printf(" \n");
+    }
+  else
+    {
+      printf("Division by Zero! \n");
+      printf(" \n");
+    }
+    break;
+    default:
+    printf("Input not allowed, please try again\n");
+    printf(" \n");
 
-  }
-  return *c;
+    }
+    return *c;
 }
 
 void OutputResult(double result)
 {
-  if(result>DBL_MAX)
-  {
-    printf("Number overflow! \n");
-  }
-  else if(result<-DBL_MAX)
-  {
-    printf("Number underflow! \n");
-  }
-  else
+  if(result<=DBL_MAX&&result>=-DBL_MAX)
   {
   printf("The result is: %lf\n", result);
   }
