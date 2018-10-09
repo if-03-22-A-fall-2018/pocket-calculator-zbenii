@@ -19,6 +19,7 @@ int Menu(int* c)
 {
   double o1;
   double o2;
+  double n;
   double result;
 
   printf("Choose one of the following operations:\n");
@@ -26,6 +27,7 @@ int Menu(int* c)
   printf("Subtract (2)\n");
   printf("Multiply (3)\n");
   printf("Divide (4)\n");
+  printf("Arithmetic Series (5)\n");
   printf("Stop program (-1)\n");
   scanf("%d",c);
 
@@ -62,6 +64,22 @@ int Menu(int* c)
       printf("Division by Zero! \n");
       printf(" \n");
     }
+    break;
+    case 5:
+    printf("Please enter your Number: ");
+    scanf("%lf",&n );
+    if(n>1)
+    {
+      ArithmeticSeries(n,&result);
+      OutputResult(result);
+      printf(" \n");
+    }
+    else
+    {
+      printf("Number must be bigger than 1! \n");
+      printf(" \n");
+    }
+
     break;
     default:
     printf("Input not allowed, please try again\n");
@@ -106,6 +124,14 @@ void Multiply(double x, double y,double* result)
 void Divide(double x, double y, double* result)
 {
   *result= x/y;
+}
+
+void ArithmeticSeries(double n,double* result)
+{
+  for(double i=1;i<=n;i++)
+  {
+    *result=*result+i;
+  }
 }
 
 int main(int argc, char const *argv[])
