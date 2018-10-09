@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 #include <float.h>
+#include "Calculator.h"
 
 int Menu(int* c)
 {
@@ -28,12 +29,12 @@ int Menu(int* c)
   printf("Stop program (-1)\n");
   scanf("%d",c);
 
-switch (*c)
-{
-  case 1:
-  GetOperands(&o1,&o2);
-  Add(o1,o2,&result);
-  OutputResult(result);
+  switch (*c)
+  {
+    case 1:
+    GetOperands(&o1,&o2);
+    Add(o1,o2,&result);
+    OutputResult(result);
   printf(" \n");
   break;
   case 2:
@@ -66,7 +67,8 @@ switch (*c)
   printf("Input not allowed, please try again\n");
   printf(" \n");
 
-}
+  }
+  return *c;
 }
 
 void OutputResult(double result)
