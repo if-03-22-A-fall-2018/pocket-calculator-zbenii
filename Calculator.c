@@ -81,6 +81,8 @@ int Menu(int* c)
     }
 
     break;
+    case -1:
+    break;
     default:
     printf("Input not allowed, please try again\n");
     printf(" \n");
