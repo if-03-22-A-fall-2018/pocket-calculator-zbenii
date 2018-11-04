@@ -84,7 +84,7 @@ int Menu(int* c)
     default:
     printf("Input not allowed, please try again\n");
     printf(" \n");
-
+    break;
     }
     return *c;
 }
